@@ -16,5 +16,7 @@ class Registers:
     def load_register(self, register, value):
         self.registers[register].set_Value(value)
     def view_registers(self):
+        register_data = ""
         for (reg_name, reg_value) in self.registers.items():
-            print("{0} -> {1}".format(reg_name, reg_value.register_value))
+            register_data += "{0} -> {1}\n".format(reg_name, reg_value.register_value)
+        return register_data

@@ -10,3 +10,5 @@ class Computer:
         self.stack.pop(self.registers.registers["ebp"])
     def load_register(self, register, value):
         self.registers.load_register(register, value)
+    def view_registers(self):
+        return self.registers.view_registers()
