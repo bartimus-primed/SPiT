@@ -5,11 +5,10 @@ class Stack:
     def push(self, item):
         self.size += 4
         self.items.append(item)
-    def pop(self, register=None):
+    def pop(self):
         item = self.items.pop()
-        if register:
-            register.set_value(item)
         self.size -= 4
+        return item
     def display_stack(self):
         return("""
             Stack Information: {0},

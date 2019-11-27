@@ -14,9 +14,9 @@ class Registers:
             ("EDI", R.EDI)]
         ))
     def load_register(self, register, value):
-        self.registers[register].set_Value(value)
+        self.registers[register].set_value(value)
     def view_registers(self):
         register_data = ""
         for (reg_name, reg_value) in self.registers.items():
-            register_data += "{0} -> {1}\n".format(reg_name, reg_value.register_value)
+            register_data += "{0} -> {1}\n".format(reg_name, reg_value.get_value())
         return register_data
