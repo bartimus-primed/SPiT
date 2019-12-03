@@ -11,6 +11,16 @@ def t_r(item, test_result):
     else:
         return "{}{}{}".format(success, item, end_line)
 
+# Create GUI
+class TestGUI(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.guiWindow = None
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.guiWindow = None
+
 # Create a stack
 class TestStacker(unittest.TestCase):
     @classmethod
